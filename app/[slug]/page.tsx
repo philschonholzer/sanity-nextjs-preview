@@ -23,8 +23,6 @@ export default async function Page({ params }: { params: any }) {
     params,
   })
 
-  console.log('mode isDraft', isDraftMode, token)
-
   if (isDraftMode && token) {
     return (
       <PreviewProvider token={token}>

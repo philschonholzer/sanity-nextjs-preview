@@ -12,7 +12,5 @@ export default function PreviewPost({ post }: { post: SanityDocument }) {
   const params = useParams()
   const [data] = useLiveQuery(post, postQuery, params)
 
-  console.log('data', new Date(), data.body)
-
   return <Post post={data} />
 }
