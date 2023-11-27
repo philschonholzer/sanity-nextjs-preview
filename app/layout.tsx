@@ -15,7 +15,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <header className="bg-sky-600 text-white">
+          <div className="container mx-auto px-4 py-4 w-full">Apptiva</div>
+        </header>
+        {children}
+      </body>
     </html>
   )
 }
