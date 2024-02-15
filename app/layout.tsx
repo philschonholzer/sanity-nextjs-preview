@@ -1,5 +1,7 @@
+import { draftMode } from 'next/headers'
 import './globals.css'
 import { Inter } from 'next/font/google'
+import LiveVisualEditing from './_components/LiveVisualEditing'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,6 +22,7 @@ export default function RootLayout({
           <div className="container mx-auto px-4 py-4 w-full">Apptiva</div>
         </header>
         {children}
+        {draftMode().isEnabled && <LiveVisualEditing />}
       </body>
     </html>
   )
